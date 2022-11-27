@@ -10,9 +10,9 @@
 
 //#define struct sockaddr *addr;
 
-int Socket(){
+//int Socket(){
 
-}
+//}
 
 int main(){
     struct sockaddr_in serv_addr;

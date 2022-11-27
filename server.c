@@ -41,8 +41,11 @@ int main(){
         printf("Listen unsuccessful....");
         exit(0);
     }
+
     int lenclient = sizeof(clientaddr);
-    if (accept(sock, (struct sockaddr *)&clientaddr, &(lenclient)) < 0) {
+    connfd = accept(sock, (struct sockaddr *)&clientaddr, &lenclient);
+    
+    if (connfd < 0) {
         printf("Failed to accept..");
         exit(0);
     } else {
