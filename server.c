@@ -43,7 +43,7 @@ int main(){
     }
 
     int lenclient = sizeof(clientaddr);
-    connfd = accept(sock, (struct sockaddr *)&clientaddr, &lenclient);
+    int connfd = accept(sock, (struct sockaddr *)&clientaddr, (socklen_t*)&lenclient);
     
     if (connfd < 0) {
         printf("Failed to accept..");
